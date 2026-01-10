@@ -1,0 +1,910 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="format-detection" content="telephone=no,email=no,address=no" />
+
+  <title>彩匠｜福島・宮城・山形 全域｜外壁＋屋根 全塗装100万円（税別）</title>
+  <meta name="description" content="福島・宮城・山形 全域対応。外壁＋屋根 全塗装100万円（税別）｜30坪まで。高耐久シリコン（耐用12〜15年）／保証3年。写真で最短30分判定・当日中見積。電子契約でシーリング工事無料。TEL:024-503-1996 / 080-1652-2983" />
+
+  <meta property="og:title" content="彩匠｜外壁＋屋根 全塗装100万円（税別）" />
+  <meta property="og:description" content="写真で最短30分判定・当日中見積。福島・宮城・山形 全域対応｜高耐久シリコン（耐用12〜15年）／保証3年。電子契約でシーリング工事無料。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ja_JP" />
+
+  <style>
+    :root{
+      --bg:#05070c;
+      --panel:#070b14;
+      --navy:#0b1533;
+      --navy2:#0d1b40;
+      --text:#e9eefb;
+      --muted:#aab6d9;
+      --line:rgba(255,255,255,.10);
+      --line2:rgba(255,255,255,.16);
+      --accent:#cfe2ff;
+      --good:#a7ffcf;
+      --warn:#ffd7a8;
+      --shadow: 0 22px 70px rgba(0,0,0,.55);
+      --radius: 18px;
+      --radius2: 24px;
+      --max: 1160px;
+      --pad: 22px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", "Meiryo", sans-serif;
+      background:
+        radial-gradient(1200px 600px at 15% 0%, rgba(13,27,64,.60), transparent 60%),
+        radial-gradient(900px 520px at 90% 10%, rgba(11,21,51,.65), transparent 55%),
+        linear-gradient(180deg, #02040a 0%, #05070c 35%, #04060b 100%);
+      color:var(--text);
+      letter-spacing:.02em;
+      overflow-x:hidden;
+      padding-bottom: 92px; /* bottom bar */
+    }
+
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 var(--pad);}
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(180deg, rgba(5,7,12,.80), rgba(5,7,12,.45));
+      border-bottom:1px solid var(--line);
+    }
+    .topbar .inner{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:16px; padding:14px 0;
+    }
+    .brand{display:flex; align-items:baseline; gap:10px; white-space:nowrap;}
+    .brand .name{font-weight:800; letter-spacing:.08em; font-size:18px;}
+    .brand .tag{
+      font-size:12px; color:var(--muted);
+      border:1px solid var(--line);
+      padding:6px 10px; border-radius:999px;
+      background:rgba(255,255,255,.03);
+    }
+    .top-cta{display:flex; gap:10px; align-items:center; flex-wrap:wrap; justify-content:flex-end;}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid var(--line2);
+      background:rgba(255,255,255,.04);
+      text-decoration:none;
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
+      font-size:13px;
+    }
+    .btn:hover{transform: translateY(-1px); background:rgba(255,255,255,.07); border-color:rgba(255,255,255,.24);}
+    .btn.primary{
+      background: linear-gradient(180deg, rgba(207,226,255,.16), rgba(207,226,255,.06));
+      border-color: rgba(207,226,255,.36);
+    }
+    .btn.ghost{background:transparent}
+    .btn small{opacity:.85}
+
+    .hero{padding:56px 0 26px;}
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap:22px;
+      align-items:stretch;
+    }
+    .hero-card{
+      border-radius: var(--radius2);
+      background: linear-gradient(180deg, rgba(11,21,51,.65), rgba(7,11,20,.65));
+      border:1px solid var(--line);
+      box-shadow: var(--shadow);
+      padding:26px 26px 22px;
+      position:relative;
+      overflow:hidden;
+    }
+    .hero-card::before{
+      content:"";
+      position:absolute; inset:-2px;
+      background:
+        radial-gradient(520px 320px at 18% 18%, rgba(207,226,255,.10), transparent 60%),
+        radial-gradient(420px 240px at 90% 22%, rgba(207,226,255,.08), transparent 62%);
+      pointer-events:none;
+    }
+    .hero-card > *{position:relative}
+    .kicker{display:flex; align-items:center; gap:10px; flex-wrap:wrap; color:var(--muted); font-size:13px;}
+    .pill{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      border-radius:999px;
+      padding:6px 10px;
+    }
+    h1{
+      margin:14px 0 12px;
+      font-size: clamp(26px, 3.5vw, 44px);
+      line-height:1.18;
+      letter-spacing:.04em;
+    }
+    .price{
+      font-weight:900;
+      color:var(--accent);
+      text-shadow: 0 0 22px rgba(207,226,255,.18);
+    }
+    .sub{
+      margin:0;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.7;
+      max-width: 58ch;
+    }
+    .hero-actions{margin-top:18px; display:flex; gap:10px; flex-wrap:wrap;}
+
+    .side-card{
+      border-radius: var(--radius2);
+      background: linear-gradient(180deg, rgba(7,11,20,.68), rgba(5,7,12,.65));
+      border:1px solid var(--line);
+      box-shadow: var(--shadow);
+      padding:18px;
+    }
+    .side-card h3{
+      margin:6px 0 10px;
+      font-size:14px;
+      color:var(--muted);
+      letter-spacing:.08em;
+      text-transform: uppercase;
+    }
+    .kv{display:grid; gap:10px;}
+    .kv .row{
+      display:flex; justify-content:space-between; gap:12px; align-items:flex-start;
+      padding:10px 12px;
+      border-radius: 14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+    }
+    .kv .k{color:var(--muted); font-size:13px}
+    .kv .v{font-weight:700; font-size:13px; text-align:right}
+    .note{margin-top:12px; color:var(--muted); font-size:12px; line-height:1.7;}
+
+    section{padding:26px 0}
+    .grid-3{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px;}
+    .card{
+      border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(7,11,20,.70), rgba(5,7,12,.55));
+      border-radius: var(--radius);
+      padding:18px;
+    }
+    .card h2, .card h3{margin:0 0 10px; font-size:16px; letter-spacing:.06em;}
+    .card p{margin:0; color:var(--muted); line-height:1.75; font-size:14px}
+
+    .section-title{
+      display:flex; align-items:end; justify-content:space-between; gap:14px; flex-wrap:wrap;
+      margin-bottom:12px;
+    }
+    .section-title h2{margin:0; font-size:18px; letter-spacing:.08em;}
+    .section-title .mini{color:var(--muted); font-size:12px;}
+
+    .plans{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:14px;
+      align-items:stretch;
+    }
+    .plan-main{
+      padding:18px;
+      border-radius: var(--radius);
+      border:1px solid rgba(207,226,255,.22);
+      background: linear-gradient(180deg, rgba(13,27,64,.55), rgba(5,7,12,.55));
+      position:relative;
+      overflow:hidden;
+    }
+    .plan-main::before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: radial-gradient(520px 320px at 20% 20%, rgba(207,226,255,.10), transparent 60%);
+      pointer-events:none;
+    }
+    .plan-main > *{position:relative}
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid rgba(207,226,255,.26);
+      background: rgba(207,226,255,.08);
+      font-size:12px;
+      color:var(--accent);
+      font-weight:700;
+    }
+    .plan-main h3{margin:12px 0 8px; font-size:18px}
+    .plan-main .big{font-size:28px; font-weight:900; letter-spacing:.06em;}
+    .plan-main .big .yen{opacity:.88}
+    .plan-main .big .tax{font-size:13px; color:var(--muted); font-weight:600}
+    ul.clean{list-style:none; padding:0; margin:12px 0 0; display:grid; gap:8px;}
+    ul.clean li{
+      padding:10px 12px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.6;
+    }
+    .plan-side{display:grid; gap:14px;}
+    .mini-plan{
+      padding:16px;
+      border-radius: var(--radius);
+      border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(7,11,20,.70), rgba(5,7,12,.55));
+    }
+    .mini-plan .t{color:var(--muted); font-size:12px; letter-spacing:.10em}
+    .mini-plan .p{margin-top:10px; font-size:22px; font-weight:900}
+    .mini-plan .p span{font-size:12px; color:var(--muted); font-weight:600}
+    .mini-plan .d{margin-top:6px; color:var(--muted); font-size:13px; line-height:1.65}
+
+    .two-col{display:grid; grid-template-columns: 1fr 1fr; gap:14px;}
+    .ok, .ng{
+      border-radius: var(--radius);
+      padding:16px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+    }
+    .ok h3, .ng h3{margin:0 0 10px; font-size:14px; letter-spacing:.08em}
+    .ok h3{color:var(--good)}
+    .ng h3{color:var(--warn)}
+    .list{margin:0; padding-left: 18px; color:var(--muted); line-height:1.75; font-size:14px;}
+
+    .form-wrap{
+      border-radius: var(--radius2);
+      border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(11,21,51,.55), rgba(5,7,12,.55));
+      box-shadow: var(--shadow);
+      padding:18px;
+    }
+    form{display:grid; gap:12px; margin-top: 6px;}
+    .row2{display:grid; grid-template-columns: 1fr 1fr; gap:12px;}
+    label{display:block; font-size:12px; color:var(--muted); margin:0 0 7px}
+    input, select, textarea{
+      width:100%;
+      background: rgba(255,255,255,.04);
+      color: var(--text);
+      border:1px solid var(--line2);
+      border-radius: 14px;
+      padding:12px 12px;
+      font-size:14px;
+      outline:none;
+    }
+    input:focus, select:focus, textarea:focus{
+      border-color: rgba(207,226,255,.45);
+      box-shadow: 0 0 0 4px rgba(207,226,255,.08);
+    }
+    textarea{min-height: 110px; resize: vertical}
+    .help{margin-top:-6px; color:var(--muted); font-size:12px; line-height:1.65;}
+    .req{color:var(--accent); font-weight:700; margin-left:6px; font-size:11px}
+    .form-actions{display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-top:6px;}
+    .submit{
+      cursor:pointer;
+      border-radius: 999px;
+      padding:12px 16px;
+      border:1px solid rgba(207,226,255,.36);
+      background: linear-gradient(180deg, rgba(207,226,255,.16), rgba(207,226,255,.06));
+      color: var(--text);
+      font-weight:800;
+      letter-spacing:.06em;
+      transition: transform .15s ease;
+    }
+    .submit:hover{transform: translateY(-1px)}
+    .fineprint{color:var(--muted); font-size:12px; line-height:1.7; margin-top:10px;}
+
+    .faq{display:grid; gap:10px;}
+    details{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.03);
+      padding:12px 14px;
+    }
+    summary{cursor:pointer; font-weight:700; letter-spacing:.04em;}
+    details p{margin:10px 0 0; color:var(--muted); line-height:1.75; font-size:14px;}
+
+    .bottom-bar{
+      position:fixed; left:0; right:0; bottom:0; z-index:60;
+      background: linear-gradient(180deg, rgba(5,7,12,.25), rgba(5,7,12,.95));
+      border-top:1px solid var(--line);
+      backdrop-filter: blur(14px);
+    }
+    .bottom-inner{
+      max-width: var(--max);
+      margin:0 auto;
+      padding: 12px var(--pad);
+      display:flex;
+      gap:10px;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+    .bottom-left{display:flex; flex-direction:column; gap:3px; min-width: 240px;}
+    .bottom-left .bname{font-weight:900; letter-spacing:.12em; font-size:12px; color:var(--muted)}
+    .bottom-left .bsub{font-size:12px; color:var(--muted)}
+    .bottom-actions{display:flex; gap:10px; flex-wrap:wrap; align-items:center; justify-content:flex-end;}
+
+    .tiny{font-size:11px; color:var(--muted)}
+    .divider{height:1px; background:var(--line); margin:10px 0}
+
+    @media (max-width: 940px){
+      .hero-grid{grid-template-columns: 1fr}
+      .plans{grid-template-columns: 1fr}
+      .row2{grid-template-columns: 1fr}
+      .two-col{grid-template-columns: 1fr}
+      .grid-3{grid-template-columns: 1fr}
+      .top-cta{justify-content:flex-start}
+    }
+  </style>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "彩匠",
+    "areaServed": ["福島県", "宮城県", "山形県"],
+    "telephone": ["024-503-1996", "080-1652-2983"],
+    "description": "福島・宮城・山形 全域対応｜外壁＋屋根 全塗装100万円（税別）｜写真で最短30分判定・当日中見積。高耐久シリコン（耐用12〜15年）／保証3年。電子契約でシーリング工事無料。"
+  }
+  </script>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <div class="inner">
+        <div class="brand" aria-label="ブランド">
+          <div class="name">彩匠</div>
+          <div class="tag">福島・宮城・山形 全域</div>
+        </div>
+
+        <nav class="top-cta" aria-label="主要導線">
+          <a class="btn primary" href="#apply">写真で100万円判定</a>
+          <a class="btn" href="tel:0245031996">固定へ発信 <small>024-503-1996</small></a>
+          <a class="btn ghost" href="tel:08016522983">携帯へ発信 <small>080-1652-2983</small></a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div class="hero-card">
+            <div class="kicker">
+              <span class="pill">写真で完結</span>
+              <span class="pill">最短30分判定</span>
+              <span class="pill">当日中見積</span>
+              <span class="pill">保証3年</span>
+            </div>
+
+            <h1>
+              福島・宮城・山形 全域｜外壁＋屋根<br/>
+              <span class="price">全塗装100万円</span><span style="opacity:.9">（税別）</span>
+            </h1>
+
+            <p class="sub">
+              高耐久シリコン（耐用12〜15年）／3回塗り。<br/>
+              まずは写真で「100万円でできるか」を判定します。<br/>
+              電子契約で <strong>シーリング工事無料</strong>（WEB完結特典）。
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn primary" href="#apply">写真で100万円判定（フォーム）</a>
+              <a class="btn" href="#flow">ネット完結の流れを見る</a>
+              <!-- LINEは後で差し替え -->
+              <a class="btn ghost" href="#line-placeholder" title="LINE公式は後ほど追加予定です">LINE（準備中）</a>
+            </div>
+
+            <div class="divider"></div>
+            <div class="tiny">
+              ※30坪まで／戸建／2階建てまでが目安です。適用条件は下部をご確認ください。
+            </div>
+          </div>
+
+          <aside class="side-card">
+            <h3>Quick Facts</h3>
+            <div class="kv">
+              <div class="row">
+                <div class="k">対応エリア</div>
+                <div class="v">福島県・宮城県・山形県（全域）</div>
+              </div>
+              <div class="row">
+                <div class="k">見積スピード</div>
+                <div class="v">最短30分判定／原則 当日中</div>
+              </div>
+              <div class="row">
+                <div class="k">塗料</div>
+                <div class="v">高耐久シリコン（耐用12〜15年）</div>
+              </div>
+              <div class="row">
+                <div class="k">保証</div>
+                <div class="v">3年</div>
+              </div>
+              <div class="row">
+                <div class="k">契約</div>
+                <div class="v">電子契約 or 訪問契約</div>
+              </div>
+            </div>
+            <p class="note">
+              急ぎの方は電話が確実です。<br/>
+              固定：<a href="tel:0245031996">024-503-1996</a><br/>
+              携帯：<a href="tel:08016522983">080-1652-2983</a><br/>
+              SMS・電話どちらでもOKです。
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLOW -->
+    <section id="flow">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>ネット完結の流れ</h2>
+          <div class="mini">現地調査の前に、まず写真で判定します。</div>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>1｜写真を送る</h3>
+            <p>正面・側面（背面）・屋根・劣化箇所アップの<strong>4枚以上</strong>をアップロード。スマホ撮影でOK。</p>
+          </div>
+          <div class="card">
+            <h3>2｜最短30分で判定</h3>
+            <p>写真を確認し、<strong>100万円で可能か</strong>を判定。原則<strong>当日中</strong>に見積をご案内します。</p>
+          </div>
+          <div class="card">
+            <h3>3｜契約（選べます）</h3>
+            <p><strong>電子契約</strong>または<strong>訪問契約</strong>。電子契約の方は<strong>WEB完結特典</strong>が適用されます。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLANS -->
+    <section id="plans">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>明朗な定額プラン</h2>
+          <div class="mini">“安い”ではなく、“分かりやすい”。条件は写真で事前に確定します。</div>
+        </div>
+
+        <div class="plans">
+          <div class="plan-main">
+            <span class="badge">Recommended｜人気No.1</span>
+            <h3>外壁＋屋根｜全塗装パック（30坪まで）</h3>
+            <div class="big"><span class="yen">100万円</span> <span class="tax">（税別）</span></div>
+
+            <ul class="clean">
+              <li>高耐久シリコン（耐用12〜15年）／3回塗り</li>
+              <li>足場・高圧洗浄・養生・清掃まで含む</li>
+              <li>付帯部塗装（雨樋・破風・軒天）を含む</li>
+              <li>保証3年</li>
+              <li>電子契約で：シーリング工事無料（WEB完結特典）</li>
+            </ul>
+          </div>
+
+          <div class="plan-side">
+            <div class="mini-plan">
+              <div class="t">外壁塗装のみ</div>
+              <div class="p">80万円 <span>（税別）</span></div>
+              <div class="d">「まずは外壁だけ」もOK。状態に応じて最適な仕様をご案内します。</div>
+            </div>
+            <div class="mini-plan">
+              <div class="t">屋根塗装のみ</div>
+              <div class="p">50万円 <span>（税別）</span></div>
+              <div class="d">屋根の劣化が気になる方向け。写真で判定し、追加費用があれば事前に明示します。</div>
+            </div>
+          </div>
+        </div>
+
+        <p class="fineprint">
+          ※立地条件・下地状況・屋根材・仕様（特殊塗装／多色仕上げ等）により追加費用が発生する場合があります。発生する場合は<strong>写真判定の段階で必ず事前にご案内</strong>します。
+        </p>
+      </div>
+    </section>
+
+    <!-- SPEC -->
+    <section id="spec">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>標準仕様（全塗装パック）</h2>
+          <div class="mini">“定額でも手抜きしない”を、仕様で示します。</div>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>基本工程</h3>
+            <p>仮設足場／高圧洗浄／下塗り＋中塗り＋上塗り（3回塗り）。</p>
+          </div>
+          <div class="card">
+            <h3>施工範囲</h3>
+            <p>外壁塗装／屋根塗装／付帯部（雨樋・破風・軒天）／養生・清掃。</p>
+          </div>
+          <div class="card">
+            <h3>安心</h3>
+            <p>高耐久シリコン（耐用12〜15年）／保証3年。電子契約でシーリング工事無料（特典）。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFIT -->
+    <section id="benefit">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>WEB完結特典</h2>
+          <div class="mini">値引きではなく、品質と安心を追加します。</div>
+        </div>
+
+        <div class="card">
+          <h3>電子契約で、シーリング工事無料</h3>
+          <p>
+            写真見積後に<strong>電子契約</strong>をいただいた方には、
+            通常別途となる<strong>シーリング工事（目地補修）</strong>を無料で対応します。<br/>
+            <span class="tiny">※適用範囲・仕様は見積書に明記します。</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONDITIONS -->
+    <section id="conditions">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>100万円パック 適用条件</h2>
+          <div class="mini">トラブルを防ぐため、条件を明確にしています。</div>
+        </div>
+
+        <div class="two-col">
+          <div class="ok">
+            <h3>対象（目安）</h3>
+            <ul class="list">
+              <li>戸建住宅</li>
+              <li>30坪以内／2階建てまで</li>
+              <li>外壁：サイディング・モルタル</li>
+              <li>屋根：スレート・金属</li>
+              <li>著しい下地劣化がない</li>
+            </ul>
+          </div>
+          <div class="ng">
+            <h3>対象外（別見積）</h3>
+            <ul class="list">
+              <li>瓦屋根</li>
+              <li>3階建て</li>
+              <li>クラック・爆裂が多数</li>
+              <li>狭小地・足場困難</li>
+              <li>特殊塗装・多色仕上げ</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPLY FORM -->
+    <section id="apply">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>写真で「100万円でできるか」判定します</h2>
+          <div class="mini">最短30分判定／原則 当日中にご連絡</div>
+        </div>
+
+        <div class="form-wrap">
+          <div class="tiny">
+            ※本番運用：写真はCloudinaryへアップロード → 申込み内容はMake Webhookへ送信 → Googleシートへ記録＋自動返信（メール）を行います。
+          </div>
+
+          <form id="estimateForm" action="#" method="post" enctype="multipart/form-data" novalidate>
+            <div class="row2">
+              <div>
+                <label>お名前 <span class="req">必須</span></label>
+                <input name="name" type="text" required placeholder="例：山田 太郎" />
+              </div>
+              <div>
+                <label>電話番号（SMS可） <span class="req">必須</span></label>
+                <input name="phone" type="tel" required inputmode="tel" placeholder="例：090-1234-5678" />
+              </div>
+            </div>
+
+            <div class="row2">
+              <div>
+                <label>メールアドレス <span class="req">必須</span></label>
+                <input name="email" type="email" required inputmode="email" placeholder="例：example@gmail.com" />
+                <div class="help">見積結果や契約案内をメールでもお送りします（SMSが届かない場合のバックアップ）。</div>
+              </div>
+              <div>
+                <label>施工先（市町村まででもOK） <span class="req">必須</span></label>
+                <input name="city" type="text" required placeholder="例：福島県 福島市" />
+              </div>
+            </div>
+
+            <div class="row2">
+              <div>
+                <label>ご希望プラン <span class="req">必須</span></label>
+                <select name="plan" required>
+                  <option value="">選択してください</option>
+                  <option>全塗装（外壁＋屋根）100万円（税別）</option>
+                  <option>外壁のみ 80万円（税別）</option>
+                  <option>屋根のみ 50万円（税別）</option>
+                  <option>相談したい（まず判定だけ）</option>
+                </select>
+              </div>
+              <div>
+                <label>坪数（目安） <span class="req">必須</span></label>
+                <input name="tsubo" type="text" required placeholder="例：30坪" />
+              </div>
+            </div>
+
+            <div class="row2">
+              <div>
+                <label>築年数（目安）</label>
+                <input name="age" type="text" placeholder="例：築12年" />
+              </div>
+              <div>
+                <label>連絡方法（優先） <span class="req">必須</span></label>
+                <select name="contact" required>
+                  <option value="">選択してください</option>
+                  <option>SMS</option>
+                  <option>電話</option>
+                  <option>どちらでも</option>
+                </select>
+                <div class="help">LINE公式は後ほど追加予定です（導線は差し替えできます）。</div>
+              </div>
+            </div>
+
+            <div>
+              <label>写真（4枚以上推奨） <span class="req">必須</span></label>
+              <input name="photos" type="file" accept="image/*" multiple required />
+              <div class="help">
+                推奨：①建物正面 ②側面/背面 ③屋根 ④劣化箇所アップ（ひび割れ・チョーキング・コケ等）<br/>
+                ※画質が荒い場合は、SMSや電話で追加撮影をご案内することがあります。
+              </div>
+              <div id="uploadStatus" class="help" style="margin-top:8px;">写真アップロード待ち</div>
+              <input type="hidden" name="photo_urls" id="photoUrls" value="">
+            </div>
+
+            <div>
+              <label>補足（気になる箇所・希望時期など）</label>
+              <textarea name="note" placeholder="例：南面の外壁にひび割れ。春に施工希望。"></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button class="submit" type="submit">送信して判定を依頼する</button>
+              <a class="btn" href="tel:0245031996">急ぎは固定へ発信</a>
+              <a class="btn ghost" href="tel:08016522983">携帯へ発信</a>
+            </div>
+
+            <div class="fineprint">
+              送信後、写真を確認し<strong>最短30分</strong>で判定します（原則当日中）。<br/>
+              追加費用が発生する場合は、<strong>必ず事前に</strong>ご案内します。<br/>
+              固定：<a href="tel:0245031996">024-503-1996</a>／携帯：<a href="tel:08016522983">080-1652-2983</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>よくある質問</h2>
+          <div class="mini">不安になりやすい点を先に潰します。</div>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>本当に100万円（税別）でできますか？</summary>
+            <p>
+              条件に合う場合は100万円（税別）で対応します。条件に合わない場合は、写真判定の段階で
+              追加費用の有無・理由を明確にご案内します（後出しはしません）。
+            </p>
+          </details>
+          <details>
+            <summary>写真だけで大丈夫ですか？</summary>
+            <p>
+              まず写真で可否判定と概算確定を行い、契約後に着工前の最終確認で施工範囲を確定します。
+              写真が不足している場合は、SMSや電話で追加撮影をご案内します。
+            </p>
+          </details>
+          <details>
+            <summary>電子契約が不安です。訪問でも契約できますか？</summary>
+            <p>
+              可能です。電子契約／訪問契約、どちらも選べます。ネットが不慣れな方もご安心ください。
+            </p>
+          </details>
+          <details>
+            <summary>保証はありますか？</summary>
+            <p>
+              保証は<strong>3年</strong>です。保証範囲・条件はお見積書に明記します。
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- LINE Placeholder -->
+    <section id="line-placeholder">
+      <div class="wrap">
+        <div class="card">
+          <h3>LINE公式（準備中）</h3>
+          <p>
+            LINE公式アカウントは後ほど追加予定です。追加後は「LINEで写真を送る」導線を最上部に配置し、
+            送信後にフォーム入力へ誘導する設計に差し替えます。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="wrap" style="padding:30px var(--pad) 36px;">
+        <div class="divider"></div>
+        <div class="tiny">
+          © 彩匠｜福島県・宮城県・山形県 全域対応｜TEL: 024-503-1996 / 080-1652-2983
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Bottom Bar -->
+  <div class="bottom-bar" role="navigation" aria-label="固定アクションバー">
+    <div class="bottom-inner">
+      <div class="bottom-left">
+        <div class="bname">彩匠</div>
+        <div class="bsub">写真で最短30分判定・当日中見積（福島/宮城/山形 全域）</div>
+      </div>
+      <div class="bottom-actions">
+        <a class="btn primary" href="#apply">写真で100万円判定</a>
+        <a class="btn" href="tel:0245031996">固定に電話</a>
+        <a class="btn ghost" href="tel:08016522983">携帯に電話</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /**
+     * 本番運用フロー：
+     * 1) 画像を Cloudinary（Unsigned Upload）へアップロード
+     * 2) 申込データ（画像URL含む）を Make Webhook へ送信
+     * 3) Make で Google Sheets へ追記 + お客様へメール自動返信 + あなたへ通知
+     */
+
+    // ▼▼▼ 必ず差し替え（Cloudinary / Make） ▼▼▼
+    const CLOUDINARY_CLOUD_NAME = "YOUR_CLOUD_NAME";
+    const CLOUDINARY_UPLOAD_PRESET = "YOUR_UNSIGNED_PRESET";
+    const MAKE_WEBHOOK_URL = "YOUR_MAKE_WEBHOOK_URL";
+    // ▲▲▲ ここまで ▲▲▲
+
+    const form = document.getElementById('estimateForm');
+    const fileInput = form.querySelector('input[type="file"][name="photos"]');
+    const uploadStatus = document.getElementById('uploadStatus');
+    const photoUrlsEl = document.getElementById('photoUrls');
+
+    function setStatus(msg){ uploadStatus.textContent = msg; }
+
+    function isEmailValid(email){
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    async function uploadToCloudinary(file){
+      const url = `https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD_NAME}/image/upload`;
+      const fd = new FormData();
+      fd.append("file", file);
+      fd.append("upload_preset", CLOUDINARY_UPLOAD_PRESET);
+
+      const res = await fetch(url, { method:"POST", body: fd });
+      if(!res.ok) throw new Error("画像アップロードに失敗しました");
+      const json = await res.json();
+      if(!json.secure_url) throw new Error("画像URLの取得に失敗しました");
+      return json.secure_url;
+    }
+
+    async function uploadAllPhotos(files){
+      const urls = [];
+      for (let i=0; i<files.length; i++){
+        setStatus(`写真アップロード中…（${i+1}/${files.length}）`);
+        const u = await uploadToCloudinary(files[i]);
+        urls.push(u);
+      }
+      return urls;
+    }
+
+    function safeTrim(v){ return (v ?? "").toString().trim(); }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const name = safeTrim(form.name.value);
+      const phone = safeTrim(form.phone.value);
+      const email = safeTrim(form.email.value);
+      const city = safeTrim(form.city.value);
+      const plan = safeTrim(form.plan.value);
+      const tsubo = safeTrim(form.tsubo.value);
+      const age = safeTrim(form.age.value);
+      const contact = safeTrim(form.contact.value);
+      const note = safeTrim(form.note.value);
+
+      // 最小バリデーション（required + 追加）
+      if(!name || !phone || !email || !city || !plan || !tsubo || !contact){
+        alert("未入力の必須項目があります。");
+        return;
+      }
+      if(!isEmailValid(email)){
+        alert("メールアドレスの形式が正しくありません。");
+        return;
+      }
+
+      const files = fileInput.files ? Array.from(fileInput.files) : [];
+      if (files.length === 0){
+        alert("写真を選択してください。");
+        return;
+      }
+      if (files.length < 4){
+        // 推奨：4枚以上（送信は可能）
+        const ok = confirm("写真は4枚以上を推奨しています（正面・側面/背面・屋根・劣化部アップ）。このまま送信しますか？");
+        if(!ok) return;
+      }
+
+      // 設定が未入力のまま送信されるのを防止
+      if(
+        CLOUDINARY_CLOUD_NAME === "YOUR_CLOUD_NAME" ||
+        CLOUDINARY_UPLOAD_PRESET === "YOUR_UNSIGNED_PRESET" ||
+        MAKE_WEBHOOK_URL === "YOUR_MAKE_WEBHOOK_URL"
+      ){
+        alert("まだ本番設定が未入力です。Cloudinary/Make の値を差し替えてから送信してください。");
+        return;
+      }
+
+      try{
+        // ① 画像アップロード
+        const urls = await uploadAllPhotos(files);
+        photoUrlsEl.value = urls.join("\n");
+        setStatus("写真アップロード完了");
+
+        // ② Makeへ送信（JSON）
+        setStatus("送信中…");
+        const payload = {
+          brand: "彩匠",
+          received_at: new Date().toISOString(),
+          name,
+          phone,
+          email,
+          city,
+          plan,
+          tsubo,
+          age,
+          contact,
+          note,
+          photo_urls: urls,
+          area: "福島・宮城・山形（全域）",
+          warranty: "3年",
+          response_speed: "最短30分判定・当日中見積"
+        };
+
+        const r = await fetch(MAKE_WEBHOOK_URL, {
+          method: "POST",
+          headers: {"Content-Type":"application/json"},
+          body: JSON.stringify(payload)
+        });
+        if(!r.ok) throw new Error("Webhook送信に失敗しました");
+
+        alert("送信ありがとうございました。写真を確認し、最短30分・原則当日中にご連絡します。");
+        form.reset();
+        setStatus("写真アップロード待ち");
+        photoUrlsEl.value = "";
+
+      }catch(err){
+        console.error(err);
+        alert("送信中にエラーが発生しました。お急ぎの場合はお電話ください（024-503-1996 / 080-1652-2983）。");
+        setStatus("エラー：再度お試しください");
+      }
+    });
+  </script>
+</body>
+</html>
