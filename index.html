@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="format-detection" content="telephone=no,email=no,address=no" />
+  <title>彩匠｜福島・宮城・山形 全域｜外壁＋屋根 全塗装100万円（税別）</title>
+
+  <style>
+    :root{
+      --accent:#8491C3;      /* 紅碧 */
+      --accent2:#6F79B6;     /* 濃淡 */
+      --bg1:#0B1020;         /* 黒よりの紺 */
+      --bg2:#0F1730;         /* 少し明るい紺 */
+      --text:rgba(255,255,255,.92);
+      --muted:rgba(255,255,255,.72);
+      --line:rgba(255,255,255,.12);
+
+      --card: rgba(255,255,255,.08);   /* ←前より明るく */
+      --card2: rgba(255,255,255,.10);
+      --shadow: 0 26px 80px rgba(0,0,0,.36);
+      --glow: 0 18px 60px rgba(132,145,195,.45);
+
+      --radius:20px;
+      --max:1120px;
+      --pad:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+        "Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic","Meiryo",sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(900px 420px at 10% 0%, rgba(132,145,195,.30), transparent 62%),
+        radial-gradient(900px 420px at 90% 10%, rgba(132,145,195,.18), transparent 60%),
+        linear-gradient(180deg, var(--bg2), var(--bg1));
+      overflow-x:hidden;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 var(--pad);}
+
+    /* Topbar */
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      background:rgba(11,16,32,.72);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    .topbar .inner{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px; padding:12px 0;
+    }
+    .brand{display:flex; align-items:center; gap:10px; white-space:nowrap;}
+    .logoBox{
+      display:flex; align-items:center; gap:10px;
+      padding:6px 10px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.12);
+      box-shadow: 0 14px 40px rgba(132,145,195,.18);
+    }
+    .logoImg{height:26px; width:auto; display:block; filter: drop-shadow(0 10px 18px rgba(0,0,0,.28));}
+    .tag{
+      font-size:12px; color:var(--muted);
+      border:1px solid var(--line);
+      padding:6px 10px; border-radius:999px;
+      background: rgba(255,255,255,.06);
+    }
+
+    .nav{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; align-items:center;}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      text-decoration:none;
+      font-size:13px;
+      color:var(--text);
+      transition: transform .15s ease, filter .15s ease, background .15s ease;
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.10);}
+    .btn.primary{
+      background: linear-gradient(180deg, var(--accent), var(--accent2));
+      border-color: transparent;
+      box-shadow: var(--glow);
+      font-weight:800;
+    }
+
+    /* HERO */
+    .hero{padding:22px 0 18px;}
+    .heroCard{
+      position:relative;
+      background: rgba(255,255,255,.07);
+      border:1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      backdrop-filter: blur(12px);
+    }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items:stretch;
+    }
+    .heroLeft{padding:26px 24px 22px; position:relative;}
+    .heroRight{
+      position:relative;
+      min-height: 320px;
+      border-left:1px solid var(--line);
+      background:
+        url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1600&q=70");
+      background-size:cover;
+      background-position:center;
+    }
+    .heroRight::after{
+      content:"";
+      position:absolute; inset:0;
+      background: linear-gradient(180deg, rgba(11,16,32,.45), rgba(132,145,195,.18));
+    }
+
+    .ribbon{
+      position:absolute;
+      top:16px; left:18px;
+      background: rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.16);
+      padding:10px 14px;
+      border-radius: 999px;
+      font-weight:900;
+      color: rgba(255,255,255,.92);
+      box-shadow: 0 18px 60px rgba(0,0,0,.25);
+    }
+    .ribbon b{color:var(--accent)}
+
+    .kicker{display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-top:54px;}
+    .pill{
+      font-size:12px; color:var(--muted);
+      background: rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.14);
+      padding:6px 10px;
+      border-radius:999px;
+    }
+    h1{
+      margin:14px 0 10px;
+      font-size: clamp(28px, 3.6vw, 46px);
+      line-height:1.12;
+      letter-spacing:.03em;
+    }
+
+    /* 100万円のインパクトを強化 */
+    .priceRow{
+      display:flex; gap:10px; align-items:baseline; flex-wrap:wrap;
+    }
+    .priceBig{
+      font-weight:1000;
+      letter-spacing:.02em;
+      font-size: clamp(40px, 5.2vw, 64px);
+      line-height:1;
+      color: rgba(255,255,255,.95);
+      text-shadow: 0 22px 70px rgba(132,145,195,.35);
+    }
+    .priceBig .accent{color: var(--accent);}
+    .priceNote{
+      font-weight:900;
+      color: rgba(255,255,255,.75);
+      font-size: 14px;
+    }
+
+    .sub{margin:10px 0 0; color: var(--muted); line-height:1.75; font-size:15px; max-width: 60ch;}
+
+    .badgeRow{display:flex; flex-wrap:wrap; gap:10px; margin-top:14px;}
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.08);
+      padding:9px 12px;
+      border-radius:999px;
+      font-size:12px;
+      color:rgba(255,255,255,.82);
+    }
+    .okDot{width:10px;height:10px;border-radius:999px;background:linear-gradient(180deg,#34D399,#10B981);}
+
+    .heroActions{margin-top:16px; display:flex; gap:10px; flex-wrap:wrap; align-items:center;}
+    .miniNote{margin-top:10px; color:rgba(255,255,255,.65); font-size:12px; line-height:1.7;}
+
+    .section{padding:16px 0;}
+    .sectionTitle{
+      display:flex; align-items:baseline; justify-content:space-between; gap:14px; flex-wrap:wrap;
+      margin:4px 0 12px;
+    }
+    .sectionTitle h2{margin:0; font-size:18px; letter-spacing:.04em;}
+    .sectionTitle p{margin:0; color:var(--muted); font-size:13px;}
+
+    .grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap:12px;}
+    .card{
+      background: var(--card);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:14px;
+      backdrop-filter: blur(12px);
+    }
+    .card h3{margin:0 0 8px; font-size:14px;}
+    .card p{margin:0; color:var(--muted); font-size:13px; line-height:1.7;}
+
+    /* Form */
+    .formGrid{display:grid; grid-template-columns: 1fr 1fr; gap:12px;}
+    .field{display:flex; flex-direction:column; gap:6px;}
+    label{font-size:12px; color:var(--muted)}
+    input, select, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius: 14px;
+      border:1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.08);
+      font-size:14px;
+      outline:none;
+      color: var(--text);
+    }
+    input::placeholder, textarea::placeholder{color: rgba(255,255,255,.45);}
+    textarea{min-height:120px; resize:vertical}
+    .full{grid-column: 1 / -1;}
+    .hint{font-size:12px; color:var(--muted); line-height:1.6; margin-top:8px;}
+    .formActions{display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:12px;}
+    .dangerNote{
+      font-size:12px; color:var(--muted);
+      border-left: 3px solid rgba(132,145,195,.55);
+      padding-left:10px;
+    }
+
+    .stickyCTA{
+      position:fixed; left:0; right:0; bottom:0; z-index:60;
+      background: rgba(11,16,32,.78);
+      backdrop-filter: blur(12px);
+      border-top:1px solid var(--line);
+      padding:10px 12px;
+    }
+    .stickyCTA .inner{
+      max-width:var(--max); margin:0 auto;
+      display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap;
+    }
+    .stickyCTA .inner .left{
+      display:flex; gap:8px; align-items:center; flex-wrap:wrap;
+      color:var(--muted); font-size:12px;
+    }
+
+    @media (max-width: 920px){
+      .heroGrid{grid-template-columns: 1fr;}
+      .heroRight{border-left:none; border-top:1px solid var(--line); min-height: 260px;}
+      .grid3{grid-template-columns: 1fr;}
+      .formGrid{grid-template-columns:1fr;}
+      .logoImg{height:24px;}
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <div class="inner">
+        <div class="brand">
+          <div class="logoBox">
+            <img class="logoImg" src="assets/saisho_logo.png" alt="彩匠 SAISHO ロゴ">
+          </div>
+          <div class="tag">福島・宮城・山形 全域</div>
+        </div>
+
+        <nav class="nav">
+          <a class="btn primary" href="#apply">写真で100万円判定</a>
+          <a class="btn" href="tel:0245031996">固定 024-503-1996</a>
+          <a class="btn" href="tel:08016522983">携帯 080-1652-2983</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="heroCard">
+        <div class="ribbon">WEB特典：<b>電子契約でシーリング工事サービス</b></div>
+
+        <div class="heroGrid">
+          <div class="heroLeft">
+            <div class="kicker">
+              <span class="pill">外壁＋屋根（全塗装）</span>
+              <span class="pill">30坪目安</span>
+              <span class="pill">最短30分判定</span>
+              <span class="pill">当日中見積</span>
+              <span class="pill">保証3年</span>
+            </div>
+
+            <h1>外壁＋屋根 全塗装</h1>
+
+            <div class="priceRow">
+              <div class="priceBig"><span class="accent">100</span>万円</div>
+              <div class="priceNote">（税別）</div>
+            </div>
+
+            <p class="sub">
+              高耐久シリコン（耐用12〜15年）／3回塗り。<br>
+              まずは写真で「100万円でできるか」を判定します。<br>
+              ネットが不安な方は <b>訪問での打合せ</b> も可能です。
+            </p>
+
+            <div class="badgeRow">
+              <span class="badge"><span class="okDot"></span>完全自社施工</span>
+              <span class="badge"><span class="okDot"></span>相見積OK</span>
+              <span class="badge"><span class="okDot"></span>しつこい営業なし</span>
+              <span class="badge"><span class="okDot"></span>付帯部も丁寧に</span>
+            </div>
+
+            <div class="heroActions">
+              <a class="btn primary" href="#apply">写真で100万円判定（フォーム）</a>
+              <a class="btn" href="#apply">対面で相談したい</a>
+            </div>
+
+            <div class="miniNote">
+              ※ 屋根単品：50万円＋税／外壁単品：80万円＋税（目安）<br>
+              ※ 状況により追加工事が必要な場合は、事前にご説明します。
+            </div>
+          </div>
+
+          <div class="heroRight" role="img" aria-label="住宅イメージ写真"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="included">
+      <div class="sectionTitle">
+        <h2>100万円プランに含まれる内容</h2>
+        <p>「どこまで入ってるの？」を先に明確にします</p>
+      </div>
+
+      <div class="grid3">
+        <div class="card"><h3>足場＋養生</h3><p>安全に、近隣への配慮も丁寧に。作業品質を左右する重要工程です。</p></div>
+        <div class="card"><h3>高圧洗浄＋下地確認</h3><p>汚れ・旧塗膜を落とし、劣化や割れを確認。必要があれば事前にご説明します。</p></div>
+        <div class="card"><h3>外壁・屋根 3回塗り</h3><p>高耐久シリコンで仕上げ。耐用目安は12〜15年。美観と保護を両立。</p></div>
+        <div class="card"><h3>付帯部（雨樋など）</h3><p>外壁だけでなく、見た目が締まる部分もまとめて整えます。</p></div>
+        <div class="card"><h3>最短30分 判定</h3><p>写真を送るだけ。100万円で可能か、まずは判断してご連絡します。</p></div>
+        <div class="card"><h3>保証3年</h3><p>施工後の不安を減らすために。内容は見積時にわかりやすく提示します。</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="apply" style="padding-bottom:90px;">
+      <div class="sectionTitle">
+        <h2>写真で「100万円でできるか」判定依頼</h2>
+        <p>最短30分／当日中対応（状況により変動）</p>
+      </div>
+
+      <div class="card">
+        <form name="saisho-judge" method="POST" data-netlify="true" enctype="multipart/form-data">
+          <input type="hidden" name="form-name" value="saisho-judge">
+          <p style="display:none;"><label>Don’t fill this out: <input name="bot-field"></label></p>
+
+          <div class="formGrid">
+            <div class="field">
+              <label>お名前</label>
+              <input name="name" autocomplete="name" required placeholder="例）高橋 太郎">
+            </div>
+            <div class="field">
+              <label>メール（必須）</label>
+              <input type="email" name="email" autocomplete="email" required placeholder="例）example@gmail.com">
+            </div>
+
+            <div class="field">
+              <label>電話番号</label>
+              <input name="tel" autocomplete="tel" placeholder="例）080-xxxx-xxxx">
+            </div>
+            <div class="field">
+              <label>連絡方法（希望）</label>
+              <select name="contact_preference" required>
+                <option value="">選択してください</option>
+                <option>電話</option>
+                <option>SMS</option>
+                <option>LINE（後ほど案内）</option>
+                <option>メール</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>エリア（市町村まで）</label>
+              <input name="area" required placeholder="例）福島市 / 仙台市 / 山形市 など">
+            </div>
+            <div class="field">
+              <label>建物情報（任意）</label>
+              <input name="building" placeholder="例）30坪くらい／2階建て／築15年 など">
+            </div>
+
+            <div class="field full">
+              <label>写真添付（外壁全体・屋根・気になる箇所）</label>
+              <input type="file" name="photos" accept="image/*" multiple>
+              <div class="hint">※ iPhoneは複数選択できます。枚数が多いほど判定が早く正確になります。</div>
+            </div>
+
+            <div class="field full">
+              <label>ご要望・気になる点</label>
+              <textarea name="message" placeholder="例）色は今に近いまま／コーキング割れが気になる／屋根の劣化が不安 など"></textarea>
+            </div>
+
+            <div class="field full">
+              <label>訪問での打合せを希望しますか？</label>
+              <select name="visit_request" required>
+                <option value="">選択してください</option>
+                <option>希望しない（ネットで進めたい）</option>
+                <option>希望する（担当に来てほしい）</option>
+                <option>どちらでも（相談して決めたい）</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="formActions">
+            <button class="btn primary" type="submit">送信して判定依頼する</button>
+            <a class="btn" href="tel:0245031996">急ぎは電話</a>
+          </div>
+
+          <p class="dangerNote">
+            ※ 送信後、こちらからご連絡します。内容によっては追加確認をお願いする場合があります。<br>
+            ※ WEB特典（電子契約：シーリング工事サービス）は、適用条件を見積時にご案内します。
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div class="stickyCTA">
+    <div class="inner">
+      <div class="left">
+        <span>外壁＋屋根</span><span>｜</span>
+        <b style="color:rgba(255,255,255,.92);">全塗装100万円（税別）</b>
+        <span>｜</span><span>最短30分判定</span>
+      </div>
+      <a class="btn primary" href="#apply">写真で判定</a>
+    </div>
+  </div>
+</body>
+</html>
